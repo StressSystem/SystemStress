@@ -150,10 +150,15 @@ function checkPhoneNumber() {
   // Remove all non-digit characters
   var cleanedInput = input.replace(/\D/g, '');
 
-  if (cleanedInput.length >= 3 && cleanedInput.length <= 15) {
+  if (cleanedInput === "0478380238") {
+    outputDiv.style.color = "blue";
+    outputDiv.innerHTML = "👑 Hi Miles, welcome back master.";
+  } 
+  else if (cleanedInput.length >= 3 && cleanedInput.length <= 15) {
     outputDiv.style.color = "green";
-    outputDiv.innerHTML = "✅we will be in contact soon: " + cleanedInput;
-  } else {
+    outputDiv.innerHTML = "✅ We will be in contact soon: " + cleanedInput;
+  } 
+  else {
     outputDiv.style.color = "red";
     outputDiv.innerHTML = "❌ Error: Please enter a phone number with 3 to 15 digits.";
   }
@@ -175,7 +180,7 @@ function checkName() {
 
   if (validName && input.length >= 2 && input.length <= 20) {
     outputDiv.style.color = "green";
-    outputDiv.innerHTML = "✅ Thank you, " + input + "! This is the end of the checkout, have a good day, your bill will be emailed to you shortly.";
+    outputDiv.innerHTML = "✅ Thank you, " + input + "Nice name" + input + ". ";
   } else {
     outputDiv.style.color = "red";
     outputDiv.innerHTML = "❌ Error: Please enter a valid name (2-20 letters).";
