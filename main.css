@@ -55,7 +55,7 @@ textarea {
 /* ===== Initializr Styles ==================================================
    Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
    ========================================================================== */
-   
+
 /*NOTE: The body sets the default font-family and size for the website*/
 
 body {
@@ -378,6 +378,7 @@ nav a:hover {
    Print styles
    ========================================================================== */
 
+   
    /* === Carousel Styles === */
 .carousel {
   position: relative;
@@ -472,6 +473,65 @@ button.next { right: 10px; }
     h3 {
         page-break-after: avoid;
     }
+/* ========== Custom Mobile Fixes ========== */
+
+/* Prevent horizontal scroll */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+/* Responsive header layout */
+.header-title-dropdown {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+/* Make dropdown and button full width on small screens */
+.dropbtn,
+.dropdown-content a,
+button {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Fix image and video scaling */
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Tweak font sizes and padding for mobile */
+@media (max-width: 768px) {
+  h1,
+  h2,
+  p,
+  button,
+  select,
+  input {
+    font-size: 1rem;
+  }
+
+  .dropdown-content a {
+    padding: 10px;
+  }
+
+  .carousel {
+    width: 100% !important;
+  }
+}
 
 }
 
