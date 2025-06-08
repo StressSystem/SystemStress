@@ -33,7 +33,7 @@ const showToast = (
     box.querySelector(".toast-progress").style.animationDuration =
             `${duration / 1000}s`;
 
-    let toastAlready = 
+    let toastAlready =
         document.body.querySelector(".toast");
     if (toastAlready) {
         toastAlready.remove();
@@ -41,13 +41,13 @@ const showToast = (
 
     document.body.appendChild(box)};
 
-let submit = 
+let submit =
     document.querySelector(".custom-toast.success-toast");
-let information = 
+let information =
     document.querySelector(".custom-toast.info-toast");
-let failed = 
+let failed =
     document.querySelector(".custom-toast.danger-toast");
-let warn = 
+let warn =
     document.querySelector(".custom-toast.warning-toast");
 
 submit.addEventListener("click",(e) => {
@@ -69,4 +69,3 @@ warn.addEventListener("click", (e) => {
     e.preventDefault();
     showToast("!warning! server error","warning",5000);
 });
-
